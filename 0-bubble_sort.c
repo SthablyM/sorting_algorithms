@@ -1,10 +1,10 @@
 # include "sort.h"
 /**
- *swap - swap integers in an array
+ *swap_int - swap integers in an array
  *@xp: first integer to swap
  *@yp: second integer to swap
  */
-void swap(int *xp, int *yp)
+void swap_int(int *xp, int *yp)
 {
 	int temp;
 
