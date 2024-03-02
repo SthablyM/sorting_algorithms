@@ -4,7 +4,7 @@
  *@xp: first integer to swap
  *@yp: second integer to swap
  */
-void swap_int(int *xp, int *yp)
+void swap(int *xp, int *yp)
 {
 	int temp;
 
@@ -33,7 +33,7 @@ void bubble_sort(int *array, size_t size)
 		{
 			if (array[i] > array[i + 1])
 			{
-				swap_int(array + i, array + i + 1);
+				swap(array + i, array + i + 1);
 
 				print_array(array, size);
 				bubble = false;
