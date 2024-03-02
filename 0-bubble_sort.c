@@ -20,7 +20,7 @@ void swap(int *xp, int *yp)
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, j = size;
+	size_t i, len = size;
 	bool bubble = false;
 
 	if (array == NULL || size < 2)
@@ -29,7 +29,7 @@ void bubble_sort(int *array, size_t size)
 	while (bubble == false)
 	{
 		bubble = true;
-		for (i = 0; i < j - 1; i++)
+		for (i = 0; i < len - 1; i++)
 		{
 			if (array[i] > array[i + 1])
 			{
@@ -39,6 +39,6 @@ void bubble_sort(int *array, size_t size)
 				bubble = false;
 			}
 		}
-		j--;
+		len--;
 	}
 }
