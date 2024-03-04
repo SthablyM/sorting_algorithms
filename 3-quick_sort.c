@@ -1,7 +1,4 @@
 #include "sort.h"
-void lomuto_partition(int *array, size_t size, int start, int end);
-void lomuto_sort(int *array, size_t size, int start, int end);
-void quick_sort(int *array, size_t size);
 /**
  *swap - swap two integers in an array
  *@xp: first int to swap
@@ -14,14 +11,14 @@ void swap(int *xp, int *yp)
 	*yp = temp;
 }
 /**
- *lomuto partition - order a subset of an aaray
+ *partition - order a subset of an aaray
  *@array: array of an int
  *@size: size of array
  *@start: the starting index
  *@end: end of an index
  *Return: the final index
  */
-int lomuto_partition(int *array, size_t size, int start, int end)
+int partition(int *array, size_t size, int start, int end)
 {
 	int *pivot, a, b;
 
@@ -46,7 +43,7 @@ int lomuto_partition(int *array, size_t size, int start, int end)
 	return (a);
 }
 /**
- *lomuto_sort - implement the quicksort
+ *quick_sort_helper - implement the quicksort
  *@array: an array of  integer
  *@size: the size of the aaray
  *@start: starting index
@@ -54,15 +51,15 @@ int lomuto_partition(int *array, size_t size, int start, int end)
  *
  *
  */
-void lomuto_sort(int *array, size_t size, int start, int end)
+void quick_sort_helper(int *array, size_t size, int start, int end)
 {
 	int k;
 
 	if (end - start > 0)
 	{
-		k = lomuto_partition(array, size, start, end);
-		lomuto_sort(array, size, start, k - 1);
-		lomuto_sort(array, size, k + 1, end);
+		k = partition(array, size, start, end);
+		quick_sort_helper(array, size, start, k - 1);
+		quick_sort_helper(array, size, k + 1, end);
 	}
 }
 /**
@@ -74,6 +71,6 @@ void quick_sort(int *array, size_t size)
 {
 	if (array == NULL || size < 2)
 		return;
-	lomuto_sort(array, size, 0, size - 1);
+	quick_sort_helper(array, size, 0, size - 1);
 }
 
