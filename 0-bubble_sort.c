@@ -1,16 +1,16 @@
 # include "sort.h"
 /**
  *swap - swap integers in an array
- *@a: first integer to swap
- *@c: second integer to swap
+ *@xp: first integer to swap
+ *@yp: second integer to swap
  */
-void swap(int *a, int *c)
+void swap(int *xp, int *yp)
 {
 	int temp;
 
-	temp = *a
-	*a = *c;
-	*c = temp;
+	temp = *xp
+	*xp = *yp;
+	*yp = temp;
 }
 /**
  *bubble_sort - function that sorts an array of integers
