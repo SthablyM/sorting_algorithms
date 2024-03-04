@@ -1,8 +1,8 @@
 # include "sort.h"
 /**
  *swap - swap integers in an array
- *@xp: first integer to swap
- *@yp: second integer to swap
+ *@a: first integer to swap
+ *@c: second integer to swap
  */
 void swap(int *a, int *c)
 {
