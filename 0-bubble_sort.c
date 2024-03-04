@@ -4,13 +4,13 @@
  *@xp: first integer to swap
  *@yp: second integer to swap
  */
-void swap(int *xp, int *yp)
+void swap(int *a, int *c)
 {
 	int temp;
 
-	temp = *xp;
-	*xp = *yp;
-	*yp = temp;
+	temp = *a
+	*a = *c;
+	*c = temp;
 }
 /**
  *bubble_sort - function that sorts an array of integers
