@@ -1,17 +1,15 @@
 #include "sort.h"
 /**
  *swap - swap  two integers in an array
- *@x: first integer to  swap
- *@y: second integer to  swap
+ *@xp: first integer to  swap
+ *@yp: second integer to  swap
  *
  */
-void swap(int *x, int *y)
+void swap(int *xp, int *yp) 
 {
-	int temp;
-
-	tmp = *x;
-	*x = *y;
-	*y = temp;
+	int temp = *xp;
+	*xp = *yp;
+	*yp = temp;
 }
 /**
  *selection_sort -  function that sorts an array of integers
