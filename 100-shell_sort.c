@@ -4,6 +4,7 @@
  *@xp: first integer to swap
  *@yp: second integer to swap
  *
+ *Decription: uses Knuth Interval sequence
  */
 void swap(int *xp, int *yp)
 {
