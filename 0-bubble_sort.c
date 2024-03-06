@@ -1,18 +1,5 @@
 # include "sort.h"
 /**
- *swap - swap integers in an array
- *@xp: first integer to swap
- *@yp: second integer to swap
- */
-void swap(int *xp, int *yp)
-{
-	int temp;
-
-	temp = *xp;
-	*xp = *yp;
-	*yp = temp;
-}
-/**
  *bubble_sort - function that sorts an array of integers
  *@array: array of int to sort
  *@size : size of the array
